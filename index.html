@@ -16,16 +16,17 @@
   </script>
 </head>
 <body>
+
   <div class="main-container">
     <header>
       <div id="nav-left-side">
         <a>corvuss</a>
       </div>
       <div id="nav-mid-side">
-        <div id="nav-links">
-            <a href="#about-me">обо мне</a>
-            <a href="#proj-1">проекты</a>
-        </div>
+        <div id="nav-links" class="flex-row">
+          <a class="nav-link" href="#about-me">обо мне</a>
+          <a class="nav-link" href="#proj-1">проекты</a>
+      </div>
       </div>
       <div id="nav-right-side">
           <div id="theme-switcher">
@@ -75,23 +76,21 @@
       
       <section>
         <div id="about-me" class="block flex-row centered-v">
-          <div id="info">
             <div id="photo">
               <img src="/static/img/real-img.png">
             </div>
-            <div class="info-block">
+            <div class="info-block-me">
               <div id="header-text">
                 <h3>обо мне</h3>
               </div>
-              <a>text</a>
+              <a id ="about-me-text">Я Ксения, веб-дизайнер и программист из Кирова. Мне нравится использовать свой творческий потенциал и навыки решения проблем для создания цифровых продуктов.</a>
             </div>
-          </div>
         </div>
       </section>
 
       <section>
         <div id="skills" class="block flex-row centered-v">
-          <div id="info-skills" >
+          <div class="info-skills" >
           <div class="skills-box">
             <h3>скиллы</h3>
             <div id="icons-box">
@@ -112,7 +111,7 @@
               <a>Информационные системы и программирование</a><br>
             </div>
   
-          <div class="project-info">
+          <div class="project-info" >
               <h3>проекты</h3>
               <div class="projects-container">
                 <div id="project-box">
@@ -135,26 +134,25 @@
       </section>
 
       <section>
-        <div class="flex-row centered-v">
+        <div id="proj-1" class="flex-row centered-v">
           <div class="info">
             <div id="photo">
               <img src="/static/img/projects/img-proj-1.png">
             </div>
             <div class="info-block">
               <h5>игра boggle</h5>
-              <a>text</a>
+              <a>Боггл - это одна из самых распространённых игр по поиску слов. Данный проект разрабатывался в рамках учебной практки.</a>
             </div>
             </div>
           </div>
-        </div>
       </section>
 
       <section>
         <div class="flex-row centered-v">
           <div class="info">
             <div class="info-block">
-              <h5>веб-сайт ювелирной мастерской</h5>
-              <a>text</a>
+              <h5>интернет магазин для ювелирной мастерской</h5>
+              <a>Веб-сайт ювелирной мастерской - проект, который разрабатывался в команде в рамках учебной практики.</a>
             </div>
             <div id="photo">
               <img src="/static/img/projects/img-proj-2.png">
@@ -171,7 +169,7 @@
             </div>
             <div class="info-block">
               <h5>рекламный баннер</h5>
-              <a>text</a>
+              <a>Тестовое задание на вакансию дизайнера в компанию "Всё для кровли и фасада"</a>
             </div>
           </div>
         </div>
@@ -179,8 +177,12 @@
 
 
     </div>
+
   </div>
+
   <script src="/static/js/switch.js">
   </script>
+    <script src="/static/js/main.js">
+    </script>
 </body>
 </html>
