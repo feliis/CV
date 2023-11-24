@@ -1,6 +1,12 @@
 async function createAsyncGETRequest(url){
     return new Promise((resolve, reject) => {
-      fetch(url).then(response=>{
+      fetch(url, {
+        method: "get",
+        headers: new Headers({
+          "ngrok-skip-browser-warning": "69420",
+        }),
+      }).then(response=>{
+        
         if(response.status==200){
           data = response.json();
           return resolve(data);
@@ -12,14 +18,16 @@ async function createAsyncGETRequest(url){
       });
   }
   
-  async function createHistory(){
-    data = await createAsyncGETRequest(' http://127.0.0.1:5000/main');
+  async function createCV(){
+    data = await createAsyncGETRequest('https://closely-sensible-gorilla.ngrok-free.app/main');
     
     //data = JSON.parse(data);
 
     
    tag= document.getElementById("about-me-text");
-   tag.textContent = data["name"]+ " " + data["surname"];
+   console.log(data)
+   console.log(data.id)
+   tag.textContent = data.name;
   }
   
-  createHistory();  
+  createCV();  
